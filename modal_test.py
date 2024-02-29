@@ -49,7 +49,9 @@ def get_data():
 
 @flow
 def main():
-    print(get_data())
+    df = get_data()
+    print(df)
+    df.write_parquet('./temp_file.parquet')
 
 if __name__ == main():
     main()
